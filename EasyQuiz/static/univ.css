@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#navbar ul { 
+	margin: 0; 
+	padding: 6px; 
+	list-style-type: none; 
+	text-align: center; 
+	background-color: #000; 
+    height: 3rem;
+    font-size: 20px;
+    font-weight: 800;
+	} 
+ 
+#navbar ul li {  
+	display: inline; 
+    padding-top: 2rem;
+
+	} 
+ 
+#navbar ul li a { 
+    font-size: 12px;
+	text-decoration: none; 
+    padding-right: 7rem;
+	color: #fff; 
+	background-color: #000; 
+    font-size: medium;
+	} 
+ 
+#navbar ul li a:hover { 
+	color: #000; 
+	background-color: #fff; 
+	} 
+
+.logo {
+    font-size: 50px;
+    text-align: center;
+    margin-right: 4rem;
+}
+
+.hd1 {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    padding-bottom: 2rem;
+}
+.hd2 {
+    font-size: 35px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 2rem;
+}
+
+.hd1 {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    padding-bottom: 2rem;
+}
+.hd2 {
+    font-size: 35px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 2rem;
+}
+.rt{
+    padding-right: 2.5rem;
+}
+.hd3 {
+    font-size: 35px;
+    font-family:Elephant;
+    text-align: center;
+    font-weight: 300;
+    padding-top: 3rem;
+}
+.desc1 {
+
+    font-size: 22;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+
+}
+
+.bdy1 {
+    padding-top: 2rem;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+
+.vl {
+    border-left: 6px solid green;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+  }
+
+.alr{
+    text-align: center;
+    align-items: center;
+}
+
+.up_pd{
+    padding-top: 5rem;
+}
+
+.foot{
+    padding-top: 4rem;
+}
