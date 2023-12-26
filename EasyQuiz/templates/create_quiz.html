@@ -1,0 +1,192 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'univ.css' %}" rel="stylesheet">
+    <link href="{% static 'home.css' %}" rel="stylesheet">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <style>
+        .ar {
+            text-align: right;
+        }
+
+        .al {
+            text-align: left;
+        }
+
+        .ct {
+            text-align: center;
+        }
+
+        .txwd {
+            width: 500px;
+        }
+
+        .ac {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar">
+        <div class="logo">
+            <img src={% static "logo.png" %}>
+        </div>
+        <ul>
+            <li><a href="profile_admin">Profile</a></li>
+            <li><a href="quiz">Logout</a></li>
+
+        </ul>
+    </div>
+
+    <div class="greet">
+
+
+
+        <p class="hd1">
+
+            Create Quiz:<br>
+
+        </p>
+        <p class="desc1">
+        <form method="POST" action="addQues">
+            {% csrf_token %}
+
+            <div class="container text-center">
+
+
+                <div class="row row-cols-3">
+                    <div class="col"></div>
+                    <div class="col">
+                        Quiz ID <input class="form-control" type="text" name="Qid" value={{qid}} disabled readonly>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <div class="row row-cols-3">
+                    <div class="col"></div>
+                    <div class="col">
+                        Quiz Name <input class="form-control" type="text" name="Qname" value={{qname}} disabled
+                            readonly>
+                    </div>
+                    <div class="col"></div>
+                </div>
+
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+
+
+
+            <input type="hidden" name='qid' value="{{qid}}">
+            <input type="hidden" name='qname' value="{{qname}}">
+
+            <div class="container-fluid">
+                <div class="row ct">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        Question {{qn}}
+                        <textarea class="form-control" name="ques" rows="3"></textarea>
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
+                </div>
+                <br><br>
+
+                <div class="row ct">
+                    <div class="col-sm">
+                        <p align="right">
+                            <input type="text" class="form-control txwd ar" name="o1" placeholder="option1">
+                        </p>
+
+                    </div>
+
+                    <div class="col-sm al">
+                        <p align="left">
+                            <input type="text" class="form-control txwd al" name="o2" placeholder="option2">
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row ct">
+                    <div class="col-sm">
+                        <p align="right">
+                            <input type="text" class="form-control txwd ar" name="o3" placeholder="option3">
+                        </p>
+
+                    </div>
+
+                    <div class="col-sm al">
+                        <p align="left">
+                            <input type="text" class="form-control txwd al" name="o4" placeholder="option4">
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="row ct">
+                    <div class="col-sm">
+                        <p align="center">
+                            <input type="text" class="form-control txwd ar" name="ans"
+                                placeholder="Correct option (eg. 3)">
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row ct">
+                    <div class="col-sm">
+                        <p align="center">
+                            <input type="submit" value="Add Question" class="form-control btn btn-success btn-lg">
+                        </p>
+                    </div>
+                    <div class="col-sm">
+                        <p align="center">
+                        <form>
+                            <a href="profile_admin" class="form-control btn btn-danger btn-lg">Create Quiz</a>    
+                            </p>
+                    </div>
+
+        </form>
+
+
+        <p align="center" name="err">
+            <font color="green">
+                {{msg}}
+            </font>
+
+            <font color="red">
+                {{err}}
+            </font>
+        </p>
+
+    </div>
+
+
+
+
+
+
+    </p>
+    </p>
+    </div>
+</body>
+
+</html>

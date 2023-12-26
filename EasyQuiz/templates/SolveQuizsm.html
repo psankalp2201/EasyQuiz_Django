@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get" action="solvequiz">
+    <div>{{obj.QuizName}}<br>
+    <span>Question :{{obj.Ques}}?</span><br>
+    <input type=radio name="op" value="{obj.Op1}}">{{obj.Op1}}
+    <input type=radio name="op" value="{{obj.Op2}}">{{obj.Op2}}
+    <input type=radio name="op" value="{{obj.Op3}}">{{obj.Op3}}
+    <input type=radio name="op" value="{{obj.Op4}}">{{obj.Op4}}
+    <input type="hidden" name='qid' value="{{qid}}">
+    <input type="submit">
+</div>
+</form>
+</body>
+</html>
